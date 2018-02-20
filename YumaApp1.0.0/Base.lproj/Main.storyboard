@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="YumaApp1_0_0" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZTk-Lg-WSs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="JIt-KG-QYq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uY2-RB-pD5">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="46"/>
+                                        <color key="backgroundColor" red="0.1764705882" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="WuJ-gf-Qrr"/>
+                                        </constraints>
+                                        <color key="barTintColor" red="0.66666666669999997" green="0.0" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textAttributes key="titleTextAttributes">
+                                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                            <color key="textColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="textShadowColor" red="0.1764705882" green="0.0078431372550000003" blue="0.0078431372550000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <offsetWrapper key="textShadowOffset" horizontal="2" vertical="2"/>
+                                        </textAttributes>
+                                        <items>
+                                            <navigationItem title="Webpage" id="nyw-4w-53x">
+                                                <barButtonItem key="leftBarButtonItem" style="done" systemItem="reply" id="NgA-S7-ZJF">
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <connections>
+                                                        <action selector="navCloseAct:" destination="BYZ-38-t0r" id="Nps-Ui-nV4"/>
+                                                    </connections>
+                                                </barButtonItem>
+                                            </navigationItem>
+                                        </items>
+                                    </navigationBar>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqM-Xg-6AZ">
+                                        <rect key="frame" x="0.0" y="46" width="375" height="601"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </webView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.66666666669999997" green="0.0" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JIt-KG-QYq" firstAttribute="trailing" secondItem="9vT-ja-MaW" secondAttribute="trailing" id="Fv0-lr-WSG"/>
+                            <constraint firstItem="JIt-KG-QYq" firstAttribute="leading" secondItem="9vT-ja-MaW" secondAttribute="leading" id="Oh6-w1-sLp"/>
+                            <constraint firstItem="JIt-KG-QYq" firstAttribute="leading" secondItem="ZTk-Lg-WSs" secondAttribute="leading" id="e9K-gw-0de"/>
+                            <constraint firstAttribute="trailing" secondItem="JIt-KG-QYq" secondAttribute="trailing" id="gvY-A5-Csz"/>
+                            <constraint firstItem="9vT-ja-MaW" firstAttribute="bottom" secondItem="JIt-KG-QYq" secondAttribute="bottom" id="j8s-rX-04V"/>
+                            <constraint firstItem="9vT-ja-MaW" firstAttribute="bottom" secondItem="JIt-KG-QYq" secondAttribute="bottom" id="mJg-v5-wGu"/>
+                            <constraint firstItem="JIt-KG-QYq" firstAttribute="top" secondItem="ZTk-Lg-WSs" secondAttribute="topMargin" id="tHY-ns-tDe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9vT-ja-MaW"/>
+                    </view>
+                    <connections>
+                        <outlet property="navBar" destination="uY2-RB-pD5" id="Ey5-6p-naR"/>
+                        <outlet property="navClose" destination="NgA-S7-ZJF" id="c4B-pY-w4m"/>
+                        <outlet property="navTitle" destination="nyw-4w-53x" id="T0J-tF-RVo"/>
+                        <outlet property="webView" destination="eqM-Xg-6AZ" id="qYe-zs-m09"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
